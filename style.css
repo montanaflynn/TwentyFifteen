@@ -404,6 +404,10 @@ pre {
 }
 code, kbd {
 	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	color: lime;
+	background: black;
+	padding: 5px;
+	display: block;
 }
 abbr, acronym, dfn {
 	border-bottom: 1px dotted #666;
@@ -538,8 +542,7 @@ a:hover {
 
 /* =Menu
 -------------------------------------------------------------- */
-
-#access {
+#access, .mini-menu {
 	background: #222; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#252525, #0a0a0a);
 	background: -o-linear-gradient(#252525, #0a0a0a);
@@ -564,7 +567,7 @@ a:hover {
 	float: left;
 	position: relative;
 }
-#access a {
+#access a, .mini-menu span {
 	color: #eee;
 	display: block;
 	line-height: 3.333em;
@@ -601,11 +604,14 @@ a:hover {
 }
 #access li:hover > a,
 #access ul ul :hover > a,
-#access a:focus {
+#access a:focus,
+
+.mini-menu ul ul :hover > a,
+.mini-menu a:focus {
 	background: #efefef;
 }
 #access li:hover > a,
-#access a:focus {
+#access a:focus, .mini-menu li:hover > a, .mini-menu a:focus {
 	background: #f9f9f9; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
@@ -622,6 +628,11 @@ a:hover {
 #access .current_page_ancestor > a {
 	font-weight: bold;
 }
+
+.mini-menu {
+	display:none;
+}
+
 
 /* Search Form */
 #branding #searchform {
@@ -2239,7 +2250,88 @@ p.comment-form-comment {
 /* =Responsive Structure
 ----------------------------------------------- */
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
+	.one-column #branding #searchform {
+		top:12px;
+		right:-10px;
+		border:20px solid white;
+		border-right:none;
+	}
+	
+	#branding {
+		overflow: hidden;
+	}
+	
+	
+	#branding #s {
+		width: 0px;
+		border-radius:0;
+	}
+	
+
+	#site-title {
+		padding-top:20px;
+	}
+	
+	#site-title a {
+		font-size:32px;
+	}
+	
+	#site-description {
+		font-size:12px;
+		margin-bottom:20px;
+	}
+	
+	#access {
+		display:none;
+	}
+	
+	.mini-menu {
+		display:block;
+	}
+	
+	
+	.mini-menu span {
+		text-align: center;
+		font-variant: small-caps;
+		cursor:pointer;
+		font-size:14px;
+	}
+
+	.mini-menu ul {
+		display:none;
+		font-size: 13px;
+		list-style: none;
+		margin:  0;
+		padding-left: 0;
+	}
+
+	.mini-menu:hover  ul {
+		display:block;
+	}
+
+	.mini-menu li a {
+		color: #eee;
+		display: block;
+		line-height: 3.333em;
+		text-decoration: none;
+	}
+
+	.mini-menu li li a {
+		padding-left:15%;
+	}
+
+	
+	.mini-menu a {
+		padding: 0 7.6%;
+	}
+
+	
+	h1.entry-title {
+		font-size:22px;
+		line-height:26px;
+	}
+		
 	/* Simplify the basic layout */
 	#main #content {
 		margin: 0 7.6%;
@@ -2354,42 +2446,7 @@ p.comment-form-comment {
 		font-size: 13px;
 	}
 	
-	.one-column #branding #searchform {
-		top:3px;
-		right:-10px;
-		border:20px solid white;
-		border-right:none;
-	}
 	
-	#branding {
-		overflow: hidden;
-	}
-	
-	
-	#branding #s {
-		width: 0px;
-		border-radius:0;
-	}
-	
-
-	#site-title {
-		padding-top:10px;
-	}
-	
-	#site-title a {
-		font-size:32px;
-	}
-	
-	#site-description {
-		font-size:12px;
-		margin-bottom:10px;
-	}
-
-	
-	h1.entry-title {
-		font-size:22px;
-		line-height:26px;
-	}
 	
 	#main {
 		padding:0;
