@@ -5,7 +5,7 @@ Description:    Child theme for the Twenty Eleven theme
 Author:         Montana Flynn
 Author URI:     http://montanaflynn.me
 Template:       twentyeleven
-Version:        0.1.0
+Version:        0.2.0
 */
 
 
@@ -2251,6 +2251,11 @@ p.comment-form-comment {
 ----------------------------------------------- */
 
 @media (max-width: 820px) {
+	
+	#main {
+		padding:0;
+	}
+	
 	.one-column #branding #searchform {
 		top:12px;
 		right:-10px;
@@ -2448,9 +2453,7 @@ p.comment-form-comment {
 	
 	
 	
-	#main {
-		padding:0;
-	}
+	
 	
 	#access ul {
 		font-size: 12px;
