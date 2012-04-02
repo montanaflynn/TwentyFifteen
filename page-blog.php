@@ -4,7 +4,7 @@
  * Description: Displays latest posts
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
+ * @subpackage TwentyFifteen
  * @since TwentyFifteen 0.2.0
  */
 
