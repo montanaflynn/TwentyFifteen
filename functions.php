@@ -1,4 +1,9 @@
 <?php
+/**
+* @package WordPress
+* @subpackage TwentyFifteen
+* @since TwentyFifteen 0.3.0
+*/
 
 if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
 /**
