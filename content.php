@@ -3,8 +3,8 @@
  * The default template for displaying content
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage TwentyFifteen
+ * @since TwentyFifteen 0.1.0
  */
 ?>
 
