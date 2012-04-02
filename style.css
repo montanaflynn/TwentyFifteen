@@ -718,6 +718,11 @@ a:hover {
 	padding: 0 0 1.625em;
 	position: relative;
 }
+
+.post {
+	padding-bottom: 50px;
+}
+
 .hentry:last-child,
 .no-results {
 	border-bottom: none;
@@ -1218,10 +1223,14 @@ blockquote.pull {
 /* =Quote
 ----------------------------------------------- */
 
+.format-quote {
+	padding-bottom: 10px;
+}
 .format-quote blockquote {
 	color: #555;
 	font-size: 17px;
 	margin: 0;
+	font-family : "Georgia", serif;
 }
 
 
@@ -1726,6 +1735,16 @@ section.recent-posts .other-recent-posts li:after {
 	padding-left: .5em;
 }
 
+
+.wp-pagenavi {
+clear: both;
+margin-bottom: 27px;
+text-align:center;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #BFBFBF !important;
+}
 
 /* =Widgets
 ----------------------------------------------- */

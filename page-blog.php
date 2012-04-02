@@ -13,15 +13,13 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
-
 				<?php /* Start the Loop */ ?>
 
 				<?php
 					$temp = $wp_query;
 					$wp_query= null;
 					$wp_query = new WP_Query();
-					$wp_query->query('posts_per_page=5'.'&paged='.$paged);
+					$wp_query->query('paged='.$paged);
 					while ($wp_query->have_posts()) : $wp_query->the_post();
 				?>
 				
@@ -29,7 +27,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 				
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				<?php wp_pagenavi(); ?>
 				
 				<?php $wp_query = null; $wp_query = $temp;?>
 			
