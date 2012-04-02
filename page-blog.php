@@ -29,9 +29,11 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 				
+				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				
 				<?php $wp_query = null; $wp_query = $temp;?>
 			
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
