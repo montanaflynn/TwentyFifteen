@@ -6,12 +6,6 @@
 */
 
 if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- * Create your own twentyeleven_posted_on to override in a child theme
- *
- * @since Twenty Eleven 1.0
- */
 function twentyeleven_posted_on() {
 	printf( __( '<span class="sep">Posted on </span><time class="entry-date" datetime="%3$s" pubdate>%4$s</time><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twentyeleven' ),
 		esc_url( get_permalink() ),
@@ -22,5 +16,12 @@ function twentyeleven_posted_on() {
 		esc_attr( sprintf( __( 'View all posts by %s', 'twentyeleven' ), get_the_author() ) ),
 		get_the_author()
 	);
+}
+endif;
+
+
+if ( ! function_exists( 'site_footer_message' ) ) :
+function footer_copyright() {
+	echo "\&copy; Copyright" . date("Y") . ", All Rights Reserved.";
 }
 endif;
