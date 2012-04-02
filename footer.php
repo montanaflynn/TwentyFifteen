@@ -5,8 +5,8 @@
  * Contains the closing of the id=main div and all content after
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage TwentyFifteen
+ * @since TwentyFifteen 0.3.0
  */
 ?>
 
@@ -23,8 +23,9 @@
 			?>
 
 			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
+				
+				Powered by WordPress using my own TwentyFifteen child theme. The server is running ubuntu and nginx powering PHP-FPM with varnish caching installed.  <a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=6&ved=0CEsQtwIwBQ&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-20zdelhi3I&ei=rO94T6iFG_LciALTzr2nDg&usg=AFQjCNFb6dydIL4-uQwVxBL45MUQoX1hpQ">Smokin!</a> 
+				
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
