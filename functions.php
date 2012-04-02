@@ -22,6 +22,6 @@ endif;
 
 if ( ! function_exists( 'site_footer_message' ) ) :
 function footer_copyright() {
-	echo "\&copy; Copyright" . date("Y") . ", All Rights Reserved.";
+	echo "&copy; Copyright" . date("Y") . ", All Rights Reserved.";
 }
 endif;
