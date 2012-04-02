@@ -61,12 +61,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
-/* =Typography 
-
-@import url(http://fonts.googleapis.com/css?family=Bangers);
+/* =Typography */
 
 h1 {
-	font-family: Bangers;
+	font-family: "Delicious-Heavy", sans-serif;
+}
+
+h2, h4, h5, h6 {
+	font-family: "Delicious", sans-serif;
+}
+
+h3 {
+	font-family: "Delicious-Bold", sans-serif;
+	font-variant: small-caps;
 }
 
 /* =Structure
@@ -1167,6 +1174,10 @@ blockquote.pull {
 /* =Link
 ----------------------------------------------- */
 
+.format-link h3 {
+	font-size:2em;
+}
+
 .format-link .entry-title,
 .format-link .entry-header .comments-link {
 	display: none;
@@ -1225,12 +1236,18 @@ blockquote.pull {
 
 .format-quote {
 	padding-bottom: 10px;
+	background: url(images/quote-icon.png) no-repeat 0 10px;
+	padding-left: 110px;
 }
 .format-quote blockquote {
 	color: #555;
 	font-size: 17px;
 	margin: 0;
 	font-family : "Georgia", serif;
+}
+
+.format-quote blockquote cite {
+	display:block;
 }
 
 
