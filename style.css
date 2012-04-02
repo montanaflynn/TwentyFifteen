@@ -204,7 +204,6 @@ body {
 	width: auto;
 }
 .one-column #nav-below {
-	border-bottom: 1px solid #ddd;
 	margin-bottom: 1.625em;
 }
 .one-column #secondary {
@@ -1106,7 +1105,6 @@ article.format-status .entry-content {
 
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
-	border-bottom: none;
 	position: relative;
 }
 
@@ -2195,6 +2193,8 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
+	background: #eee;
+	text-shadow: 0 1px 1px rgba(255,255,255,.5);
 }
 #supplementary {
 	border-top: 1px solid #ddd;
