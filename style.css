@@ -313,7 +313,7 @@ body {
 	left: 2.2em;
 }
 .one-column #respond {
-	width: auto;
+	width: 686px;
 }
 
 
@@ -408,7 +408,7 @@ pre {
 	overflow: auto;
 	padding: 0.75em 1.625em;
 }
-code, kbd {
+code, kbd, .code {
 	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	color: lime;
 	background: black;
@@ -1174,8 +1174,17 @@ blockquote.pull {
 /* =Link
 ----------------------------------------------- */
 
-.format-link h3 {
-	font-size:2em;
+.format-link h2 {
+	font-size:1.5em;
+	font-variant:small-caps;
+}
+
+.format-link::before {
+	content: "LINK:";
+	color:black;
+	font-size:10px;
+	position: relative;
+	top: 25px;
 }
 
 .format-link .entry-title,
@@ -1737,19 +1746,17 @@ section.recent-posts .other-recent-posts li:after {
 
 /* Singular navigation */
 #nav-single {
-	float: right;
 	position: relative;
 	top: -0.3em;
-	text-align: right;
 	z-index: 1;
+	border-bottom: 1px solid #ddd;
 }
-#nav-single .nav-previous,
-#nav-single .nav-next {
-	float: none;
-	width: auto;
+#nav-single .nav-previous {
+	float:left;
 }
+
 #nav-single .nav-next {
-	padding-left: .5em;
+	float:right;
 }
 
 
@@ -1759,8 +1766,9 @@ margin-bottom: 27px;
 text-align:center;
 }
 
-.wp-pagenavi a:hover, .wp-pagenavi span.current {
-	border-color: #BFBFBF !important;
+.wp-pagenavi a, .wp-pagenavi span {
+border: none !important;
+font-weight:normal;
 }
 
 /* =Widgets
@@ -2071,12 +2079,7 @@ a.comment-reply-link > span {
 
 /* Comment Form */
 #respond {
-	background: #ddd;
-	border: 1px solid #d3d3d3;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin: 0 auto 1.625em;
-	padding: 1.625em;
+	margin: 34px 0 0 0;
 	position: relative;
 	width: 68.9%;
 }
@@ -2124,7 +2127,7 @@ a.comment-reply-link > span {
 }
 #respond textarea {
 	resize: vertical;
-	width: 95%;
+	width: 100%;
 }
 #respond .comment-form-author .required,
 #respond .comment-form-email .required {
