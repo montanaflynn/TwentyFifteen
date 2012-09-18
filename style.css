@@ -2490,10 +2490,12 @@ p.comment-form-comment {
 		font-size: 13px;
 	}
 	
-	
-	
-	
-	
+	header .social-links {
+    	width: 200px;
+        text-align: center;
+        margin: 20px auto;
+	}
+    
 	#access ul {
 		font-size: 12px;
 	}
