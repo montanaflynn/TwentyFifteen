@@ -32,5 +32,9 @@
 
 <?php wp_footer(); ?>
 
+
+
+<img style="position: fixed; bottom: 0; right: 0; border: 0;z-index:20000" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/resize-me.png" alt="Responsive Design Resize Browser">
+
 </body>
 </html>
