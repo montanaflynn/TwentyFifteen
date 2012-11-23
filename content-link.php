@@ -11,8 +11,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
-		<h2><a href="<?php echo get_post_meta($post->ID, 'link-url', true); ?>"><?php the_title(); ?></a></h2>
-	</div><!-- .entry-content -->
+	<header class="entry-header">
+			<hgroup>
+				<h2 class="entry-title"><a href="<?php echo get_post_meta($post->ID, 'link-url', true); ?>"><?php the_title(); ?></a></h2>
+				<?php the_content(); ?>
+			</hgroup>
+
+		</header><!-- .entry-header -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
