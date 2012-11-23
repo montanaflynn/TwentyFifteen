@@ -69,19 +69,46 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
-	<header id="branding" role="banner">
-			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
 
+<a class="github-ribbon" href="https://github.com/montanaflynn/TwentyFifteen"><img style="position: fixed; top: 0; right: 0; border: 0;z-index:20000" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">			
+
+				<hgroup>
+					<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</hgroup>
+				
+				<div class="social-links">
+					<a href="http://twitter.com/montanaflynn"><img src="http://g.etfv.co/http://twitter.com" alt="Twitter" width="16" height="16" /></a>
+					<a href="http://forrst.com/people/montanaflynn"><img src="http://g.etfv.co/http://forrst.com" alt="Forrst" width="16" height="16" /></a>
+					<a href="http://linkedin.com/in/montanaflynn"><img src="http://g.etfv.co/http://linkedin.com" alt="LinkedIn" width="16" height="16" /></a>
+					<a href="http://github.com/montanaflynn"><img src="http://g.etfv.co/http://github.com" alt="Github" width="16" height="16" /></a>
+					<a href="http://geeklist.com/montanaflynn"><img src="http://g.etfv.co/http://geeklist.com" alt="Geeklist" width="16" height="16" /></a>
+					<a href="http://www.quora.com/Montana-Flynn"><img src="http://g.etfv.co/http://quora.com" alt="Quora" width="16" height="16" /></a>
+				</div>
+			
+				<nav id="access" role="navigation">
+					<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
+					<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+					<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
+					<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
+					<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</nav><!-- #access -->
+				
+				<nav class="mini-menu">
+					<span>- reveal menu -</span>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</nav>
+			
 			<?php
 				// Check to see if the header image has been removed
 				$header_image = get_header_image();
 				if ( ! empty( $header_image ) ) :
 			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<div class="image-container">
 				<?php
 					// The header image
 					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
@@ -92,36 +119,12 @@
 						// Houston, we have a new header image!
 						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 					else : ?>
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+					<img class="stretch-image" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 				<?php endif; // end check for featured image or standard header ?>
-			</a>
+			</div>
 			<?php endif; // end check for removed header image ?>
-
-			<?php
-				// Has the text been hidden?
-				if ( 'blank' == get_header_textcolor() ) :
-			?>
-				<div class="only-search<?php if ( ! empty( $header_image ) ) : ?> with-image<?php endif; ?>">
-				<?php get_search_form(); ?>
-				</div>
-			<?php
-				else :
-			?>
-				<?php get_search_form(); ?>
-			<?php endif; ?>
-
-			<nav id="access" role="navigation">
-				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
-				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
-				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
-			<nav class="mini-menu">
-				<span>- reveal menu -</span>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav>
+		
+			
 	</header><!-- #branding -->
 
 
