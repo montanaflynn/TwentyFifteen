@@ -9,11 +9,11 @@
  * @since TwentyFifteen 0.3.0
  */
 ?>
-
+</div>
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-
+    <div class="content">
 			<?php
 				/* A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
@@ -27,6 +27,7 @@
 				<?php footer_copyright(); ?>
 				
 			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
